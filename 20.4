@@ -1,0 +1,24 @@
+#include <stdio.h> 
+#include <ctype.h> 
+#include <string.h> 
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	int k = 0;
+	string s;
+	char c;
+	cout << "\n";
+	cin >> c;
+	cout << "\n";
+	cin.ignore();
+	getline(cin, s);
+	for (int i = s.length; i > - 1; i--)
+	{
+		if (s[i] == c)
+		{
+			s.insert(i, 1, c);
+		}
+	}
+	cout << s ;
+}
